@@ -1,2 +1,2 @@
 # mesh-term-massager
-Turn MeSH-terms xml into tabular format
+Turn MeSH-terms xml file into tabular format
