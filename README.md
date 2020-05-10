@@ -3,7 +3,7 @@ Turn MeSH-terms xml file into tabular format
 
 Introduction
 --
-Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into a DataFrame or json format which could be readily used in down-stream applications.
+Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into a Pandas DataFrame or json format which could be readily used in down-stream applications.
 
 Requirements
 --
@@ -15,7 +15,9 @@ Requirements
 
 Usage
 --
-Jupyter notebook with an example on how to run the parser.
+Please see the [attached Jupyter notebook](https://github.com/AcademixBio/mesh-term-massager/blob/master/mesh-term-massager.ipynb) for an example on how to run the parser.
+
+Basix steps:
 1. Initiate a new instance of the class `MeshTermMassager` with and include the path to the .xml file downloaded from NCBI
 2. Invoke the `parse_terms` function to parse the data
 3. Use either the `get_processed_df` or `save_json` to view/export the processed data
