@@ -12,11 +12,11 @@ class MeshTermMassager:
         Parameters:
                 MESH_XML_PATH(str): the path of the XML file
         """
-        def __init__(self, MESH_XML_PATH: str ):
+        def __init__(self, MESH_XML_PATH: str, take_permutated=False ):
                 self.MESH_XML_PATH=MESH_XML_PATH
                 self.processed_df=pd.DataFrame()
                 self.df_cols = ["Unique_ID", "MeSH_heading", "tree_num", "term_concepts", "entry_terms"]
-                self.take_permutated=False # Should the parse take all permutations of a term
+                self.take_permutated=take_permutated # Should the parser take all permutations of a term
                 
         def parse_terms(self):
                 """
