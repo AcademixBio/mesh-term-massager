@@ -7,7 +7,7 @@ Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](htt
 
 Requirements
 --
-- Python3.5
+- Python > 3.5
 - MeSH XML file downloaded from NCBI
 
 *Note: code was tested on the 2019, 2020 xml version*
