@@ -3,7 +3,7 @@ Turn MeSH-terms xml file into tabular format
 
 Introduction
 --
-Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into a Pandas DataFrame or json format which could be readily used in down-stream applications.
+Mesh-term-massager is used to convert MeSH terms list downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into a Pandas DataFrame or json format which could be readily used in down-stream applications.
 
 Requirements
 --
