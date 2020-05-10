@@ -3,33 +3,33 @@ Turn MeSH-terms xml file into tabular format
 
 Introduction
 --
-Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into CSV tabular format which could be readily used in down-stream applications.
+Mesh-term-massager is used to convert MeSH term lists downloaded from [NCBI](https://www.nlm.nih.gov/databases/download/mesh.html) in XML format into a DataFrame or json format which could be readily used in down-stream applications.
 
 Requirements
 --
-- Python3
+- Python3.5
 - MeSH XML file downloaded from NCBI
 
-*Note: code was tested on the 2019 xml version, and is currently set only to extract diease terms.*
+*Note: code was tested on the 2019, 2020 xml version*
 
 
 Usage
 --
-1. Edit the script to include the path to the .xml file downloaded from NCBI
-2. Invoke the command `python mesh_xml.py` 
+Jupyter notebook with an example on how to run the parser.
+1. Initiate a new instance of the class `MeshTermMassager` with and include the path to the .xml file downloaded from NCBI
+2. Invoke the `parse_terms` function to parse the data
+3. Use either the `get_processed_df` or `save_json` to view/export the processed data
 
 Output
 --
 
-The out is a CSV file with the following structure
+The out is a DataFrame or json file with the following structure
 
-DescriptorUI |	UIstring |	TreeNumbers | TreeStrings
--------------|-----------|--------------|------------
-D000007 |	Abdominal Injuries |	['C26.017'] |	['Injuries, Abdominal']
-D000008 |	Abdominal Neoplasms |	['C04.588.033'] |	[]
-D000013 |	Congenital Abnormalities |	['C16.131'] |	['Deformities', 'Congenital Defects', 'Defects, Congenital', 'Abnormalities, Congenital', 'Birth Defects']
-D000014 |	Abnormalities, Drug-Induced |	['C16.131.042']	| ['Drug-Induced Abnormalities'] 
-
-
+Unique_ID |	MeSH_heading |	tree_num | term_concepts | entry_terms
+-------------|-----------|--------------|------------|------------------
+D000001 |	Calcimycin	| [D03.633.100.221.173] |	[Calcimycin, A-23187]	| [A-23187, A23187, Antibiotic A23187]
+D000002 |	Temefos	| [D02.705.400.625.800, D02.705.539.345.800, D02... |	[Temefos, Abate, Difos]	| [Temephos, Abate, Difos]
+D000003 |	Abattoirs | 	[J01.576.423.200.700.100, J03.540.020] |	[Abattoirs]	| [Slaughter Houses, Slaughter House, Slaughterh...
+D000004 |	Abbreviations as Topic |        [L01.559.598.400.556.131]	| [Abbreviations as Topic, Acronyms as Topic] |	[Acronyms as Topic]
 
 
