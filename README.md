@@ -1,5 +1,5 @@
 # mesh-term-massager :massage:
-Turn MeSH-terms xml file into tabular format 
+Turn MeSH-terms xml file into tabular format (JSON or DataFrame)
 
 Introduction
 --
